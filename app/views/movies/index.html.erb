@@ -1,0 +1,19 @@
+
+<br>
+<table>
+    <tr>
+        <th>Name</th>
+        
+    </tr>
+
+<% @movies.each do |movie| %>
+    
+    <tr>
+    <td><%= link_to movie.name, movie_path(movie) %></td>
+    <td><%= link_to 'Düzenle', edit_movie_path(movie) %></td>
+    <td><%= link_to 'Sil', movie_path(movie), method: :delete, data: { confirm: 'Emin Misiniz?' } %></td>
+    </tr>
+
+<% end %>
+
+</table>
